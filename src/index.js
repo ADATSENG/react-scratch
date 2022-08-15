@@ -8,14 +8,13 @@ import {
 } from "react-router-dom";
 const Scratch = lazy(() => import('./components/Scratch'));
 
+
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter>
       <Suspense fallback="loading...">
         <Routes>
           <Route exact path="/" element={<Scratch></Scratch>} />
-
-
         </Routes>
       </Suspense>
 

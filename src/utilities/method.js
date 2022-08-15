@@ -1,6 +1,6 @@
 
-export const getBallImage = (color) => {
-  return require(`../images/ball/${color}.png`)
+export const getBackGroundImage = () => {
+  return require(`../images/background_image.jpg`)
 }
 
 

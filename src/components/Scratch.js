@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import '../css/index.css'
-import { getBallImage, CIRCLE, PADDING } from '../utilities/method'
+import { getBackGroundImage, CIRCLE, PADDING } from '../utilities/method'
 
 
 const Scratch = () => {
@@ -18,8 +18,8 @@ const Scratch = () => {
 
 
     const handleResize = e => {
-      canvasHeight = window.innerHeight - PADDING.VERTICAL;
-      canvasWidth = window.innerWidth - PADDING.HORIZONTAL;
+      canvasHeight = window.innerHeight;
+      canvasWidth = window.innerWidth
       canvas.height = canvasHeight
       canvas.width = canvasWidth
     };
@@ -29,7 +29,7 @@ const Scratch = () => {
 
     const area = canvasWidth * canvasHeight;
     const newImage = new Image();
-    newImage.src = require("../images/scratch_off_cover.png")
+    newImage.src = require("../images/scratch_off_cover.jpg")
 
     // render canvas
     newImage.onload = function () {
@@ -121,7 +121,7 @@ const Scratch = () => {
         <div className='scratch__container'>
 
           <div className='scratch__secret'>
-            <img className='scratch__ball' src={getBallImage(params?.ballColor)}></img>
+            <img className='scratch__ball' src={getBackGroundImage()}></img>
             <p className='scratch__text'>{params?.ballValue}</p>
             <p className='scratch__zodiac'>{params?.ballZodiac}</p>
           </div>
